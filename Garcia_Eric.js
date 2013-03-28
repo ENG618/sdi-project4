@@ -25,10 +25,10 @@ var myLibrary = function (){
 	var checkPhoneNumber = function(val){
 		if (val[3] == "-"){
 		}if (val[7] == "-"){
-			return true
+			return true;
 		}else{
-			return false
-		}
+			return false;
+		};
 	};
 
 
@@ -192,12 +192,13 @@ var myLibrary = function (){
 
 	var getSum = function(val){
 		var strLen = val.length;
-		var sum = 0
+		var sum = 0;
 		for (var i=0; i <= strLen; i++){
-			sum += strLen[i]
-
-		}
-			return sum
+			if (!isNaN (val[i])) {
+					sum += val[i]
+				}
+		}	
+		return sum
 	};
 
 
@@ -234,6 +235,6 @@ var myLibrary = function (){
 var newLib = new myLibrary();
 
 console.log('It is ' + newLib.checkPhoneNumber('123-456-7890') + ' that this is a phone number')
-console.log('Find the sum of ' + newLib.getSum([1, 2, 3, 4]));
+console.log('Find the sum of ' + newLib.getSum([1, 'pickles', 3, 'onions', 5, '10', 6, 'SDI']));
 
 
