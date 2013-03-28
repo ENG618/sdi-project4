@@ -57,9 +57,15 @@ var myLibrary = function (){
 		value returned from the function should be a Boolean; that is, true if the string
 		matches the pattern or false if it does not.
 	*/
-/*
+
 	var checkUrl = function (url){
-		if (url)
+		if (url.substr(0,7) == 'http://'){
+			return true
+		} if (url.substr(0,8) == 'https://'){
+			return true
+		}else{
+			return false
+		}
 
 		//returns true or false
 	};
@@ -215,7 +221,7 @@ var myLibrary = function (){
 	return {
 		'checkPhoneNumber': 	checkPhoneNumber,
 		//'checkEmail': 		checkEmail,
-		//'checkUrl': 			checkUrl,
+		'checkUrl': 			checkUrl,
 		//'createTitle': 		createTitle,
 		//'changeSeparator': 	changeSeparator,
 		'convertDecimal': 	convertDecimal,
@@ -231,6 +237,7 @@ var myLibrary = function (){
 var newLib = new myLibrary();
 
 console.log('It is ' + newLib.checkPhoneNumber('123-456-7890') + ' that this is a phone number');
+console.log('It is ' + newLib.checkUrl("http://www.whereever.com") + ' that this is in url format')
 console.log(newLib.convertDecimal(3.14159, 3));
 console.log('Find the sum of ' + newLib.getSum([1, 'pickles', 3, 'onions', 5, '10', 6, 'SDI']));
 
