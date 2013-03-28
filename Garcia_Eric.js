@@ -21,11 +21,14 @@ var myLibrary = function (){
 		from the function should be a Boolean; that is, true if the string matches the
 		pattern or false if it does not.
 	*/
-	var checkPhoneNumber = function(val){
-		if (){
 
+	var checkPhoneNumber = function(val){
+		if (val[3] == "-"){
+		}if (val[7] == "-"){
+			return true
+		}else{
+			return false
 		}
-		//returns true or false
 	};
 
 
@@ -38,7 +41,7 @@ var myLibrary = function (){
 		this would match the pattern. The only value returned from the function should
 		be a Boolean; that is, true if the string matches the pattern or false if it does not.
 	*/
-
+/*
 	var checkEmail = function (){
 
 		//return true or false
@@ -54,8 +57,9 @@ var myLibrary = function (){
 		value returned from the function should be a Boolean; that is, true if the string
 		matches the pattern or false if it does not.
 	*/
-
+/*
 	var checkUrl = function (url){
+		if (url)
 
 		//returns true or false
 	};
@@ -68,10 +72,8 @@ var myLibrary = function (){
 		of each word to uppercase while making sure the rest of the word is lowercase,
 		and then returning the string from the function so it can be output.
 	*/
-
-	var createTitle = function (Title){
-
-	};
+/*
+	var createTitle = function (Title){};
 
 
 	//Change Separator 
@@ -85,7 +87,7 @@ var myLibrary = function (){
 		separator you are going to use in place of the original. Thus, if you send the
 		parameters (“a,b,c”, “,”, “/”), the function should return the string as “a/b/c”.
 	*/
-
+/*
 	var changeSeparator = function (string, separator, newSeparator){
 
 	};
@@ -104,7 +106,7 @@ var myLibrary = function (){
 		send the following argument parameters: (3.14159, 3). The function will then
 		return 3.142.
 	*/
-
+/*
 	var convertDecimal = function (val, deci){
 
 	};
@@ -122,7 +124,7 @@ var myLibrary = function (){
 		greater than or less than 10. It would then determine if 5 is within 50% of 10. The
 		function should then return the results.
 	*/
-
+/*
 	var checkPercent = function (check, val, percent){
 
 	};
@@ -137,7 +139,7 @@ var myLibrary = function (){
 		necessary to find the difference between the two dates and return the choice of
 		hours or days.
 	*/
-
+/*
 	var dateDiff = function (date1, date2, hoursDay){
 
 	};
@@ -152,7 +154,7 @@ var myLibrary = function (){
 		creative, you also can add a conditional to determine if the string sent into the
 		function is a number before you do the conversion.
 	*/
-
+/*
 	var stringNum = function (val){
 
 	};
@@ -171,7 +173,7 @@ var myLibrary = function (){
 		you’re using in the comparison. So, if you send the array [1,4,7,9,10,14,15] and
 		the number 12 into the function, it should return 14 as the next highest number.
 	*/
-
+/*
 	var getLowes = function (){
 
 	};
@@ -188,8 +190,14 @@ var myLibrary = function (){
 		string and ignore it from the total.
 	*/
 
-	var getSum = function(){
+	var getSum = function(val){
+		var strLen = val.length;
+		var sum = 0
+		for (var i=0; i <= strLen; i++){
+			sum += strLen[i]
 
+		}
+			return sum
 	};
 
 
@@ -203,30 +211,29 @@ var myLibrary = function (){
 		function using the key “a” and returned as [{a:1},{a:2},{a:3},{a:4},{b:3}].
 	*/
 
-	var gitSumNum = function (){
-
-	};
+	//var gitSumNum = function (val){};
 
 
 	//Returns
 	return {
-		'checkPhoneNumber': checkPhoneNumber,
-		'checkEmail': 		checkEmail,
-		'checkUrl': 		checkUrl,
-		'createTitle': 		createTitle,
-		'changeSeparator': 	changeSeparator,
-		'convertDecimal': 	convertDecimal,
-		'checkPercent': 	checkPercent,
-		'dateDiff': 		dateDiff,
-		'stringNum': 		stringNum,
-		'getLowes': 		getLowes,
-		'getSum': 			getSum,
-		'gitSumNum': 		gitSumNum
+		'checkPhoneNumber': 	checkPhoneNumber,
+		//'checkEmail': 		checkEmail,
+		//'checkUrl': 			checkUrl,
+		//'createTitle': 		createTitle,
+		//'changeSeparator': 	changeSeparator,
+		//'convertDecimal': 	convertDecimal,
+		//'checkPercent': 		checkPercent,
+		//'dateDiff': 			dateDiff,
+		//'stringNum': 			stringNum,
+		//'getLowes': 			getLowes,
+		'getSum': 				getSum
+		//'gitSumNum': 			gitSumNum
 	}
 };
 
 var newLib = new myLibrary();
 
-console.log('checkPhoneNumber: ' + newLib.checkPhoneNumber(123-456-7890));
-console.log('areYouJosh: ' + newLib.areYouJosh("Josh"));
-console.log('The dash is in position ' + newLib.checkString('12-3456'));
+console.log('It is ' + newLib.checkPhoneNumber('123-456-7890') + ' that this is a phone number')
+console.log('Find the sum of ' + newLib.getSum([1, 2, 3, 4]));
+
+
