@@ -22,7 +22,7 @@ var myLibrary = function (){
 		pattern or false if it does not.
 	*/
 
-	var checkPhoneNumber = function(val){
+	var checkPhoneNum = function(val){
 		if (val[3] == "-"){
 		}if (val[7] == "-"){
 			return true;
@@ -60,11 +60,11 @@ var myLibrary = function (){
 
 	var checkUrl = function (url){
 		if (url.substr(0,7) == 'http://'){
-			return true
+			return true;
 		} if (url.substr(0,8) == 'https://'){
-			return true
+			return true;
 		}else{
-			return false
+			return false;
 		}
 
 		//returns true or false
@@ -112,9 +112,9 @@ var myLibrary = function (){
 		return 3.142.
 	*/
 
-	var convertDecimal = function (val, deci){
-		var newNum = val.toFixed(deci)
-			return newNum
+	var convertDeci = function (val, deci){
+		var newNum = val.toFixed(deci);
+			return newNum;
 	};
 
 
@@ -158,8 +158,15 @@ var myLibrary = function (){
 		creative, you also can add a conditional to determine if the string sent into the
 		function is a number before you do the conversion.
 	*/
-/*
-	var stringNum = function (val){
+
+	var strNum = function(val){
+		if (!isNaN(val)){
+			console.log('This is a string that can be converted')
+			parseInt(val)
+		}else{
+			console.log ('This sting is not a "number"');
+		}
+		return val
 	};
 
 
@@ -219,15 +226,15 @@ var myLibrary = function (){
 
 	//Returns
 	return {
-		'checkPhoneNumber': 	checkPhoneNumber,
+		'checkPhoneNum': 		checkPhoneNum,
 		//'checkEmail': 		checkEmail,
 		'checkUrl': 			checkUrl,
 		//'createTitle': 		createTitle,
 		//'changeSeparator': 	changeSeparator,
-		'convertDecimal': 	convertDecimal,
+		'convertDeci': 			convertDeci,
 		//'checkPercent': 		checkPercent,
 		//'dateDiff': 			dateDiff,
-		//'stringNum': 			stringNum,
+		'strNum': 				strNum,
 		//'getLowes': 			getLowes,
 		'getSum': 				getSum
 		//'gitSumNum': 			gitSumNum
@@ -236,9 +243,10 @@ var myLibrary = function (){
 
 var newLib = new myLibrary();
 
-console.log('It is ' + newLib.checkPhoneNumber('123-456-7890') + ' that this is a phone number');
+console.log('It is ' + newLib.checkPhoneNum('123-456-7890') + ' that this is a phone number');
 console.log('It is ' + newLib.checkUrl("http://www.whereever.com") + ' that this is in url format')
-console.log(newLib.convertDecimal(3.14159, 3));
+console.log(newLib.convertDeci(3.14159, 3));
+console.log(newLib.strNum('123'));
 console.log('Find the sum of ' + newLib.getSum([1, 'pickles', 3, 'onions', 5, '10', 6, 'SDI']));
 
 
