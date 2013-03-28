@@ -89,7 +89,6 @@ var myLibrary = function (){
 	*/
 /*
 	var changeSeparator = function (string, separator, newSeparator){
-
 	};
 
 
@@ -106,9 +105,10 @@ var myLibrary = function (){
 		send the following argument parameters: (3.14159, 3). The function will then
 		return 3.142.
 	*/
-/*
-	var convertDecimal = function (val, deci){
 
+	var convertDecimal = function (val, deci){
+		var newNum = val.toFixed(deci)
+			return newNum
 	};
 
 
@@ -126,7 +126,6 @@ var myLibrary = function (){
 	*/
 /*
 	var checkPercent = function (check, val, percent){
-
 	};
 
 
@@ -141,7 +140,6 @@ var myLibrary = function (){
 	*/
 /*
 	var dateDiff = function (date1, date2, hoursDay){
-
 	};
 
 
@@ -156,7 +154,6 @@ var myLibrary = function (){
 	*/
 /*
 	var stringNum = function (val){
-
 	};
 
 
@@ -175,7 +172,6 @@ var myLibrary = function (){
 	*/
 /*
 	var getLowes = function (){
-
 	};
 
 
@@ -190,7 +186,7 @@ var myLibrary = function (){
 		string and ignore it from the total.
 	*/
 
-	var getSum = function(val){
+	var getSum = function(val){ //Not sure why it is not ignoring the "10" 
 		var strLen = val.length;
 		var sum = 0;
 		for (var i=0; i <= strLen; i++){
@@ -222,7 +218,7 @@ var myLibrary = function (){
 		//'checkUrl': 			checkUrl,
 		//'createTitle': 		createTitle,
 		//'changeSeparator': 	changeSeparator,
-		//'convertDecimal': 	convertDecimal,
+		'convertDecimal': 	convertDecimal,
 		//'checkPercent': 		checkPercent,
 		//'dateDiff': 			dateDiff,
 		//'stringNum': 			stringNum,
@@ -234,7 +230,8 @@ var myLibrary = function (){
 
 var newLib = new myLibrary();
 
-console.log('It is ' + newLib.checkPhoneNumber('123-456-7890') + ' that this is a phone number')
+console.log('It is ' + newLib.checkPhoneNumber('123-456-7890') + ' that this is a phone number');
+console.log(newLib.convertDecimal(3.14159, 3));
 console.log('Find the sum of ' + newLib.getSum([1, 'pickles', 3, 'onions', 5, '10', 6, 'SDI']));
 
 
