@@ -80,8 +80,8 @@ var myLibrary = function (){
 		of each word to uppercase while making sure the rest of the word is lowercase,
 		and then returning the string from the function so it can be output.
 	*/
-/*
-	var createTitle = function (Title){};
+
+	//var createTitle = function (Title){};
 
 
 	//Change Separator 
@@ -95,9 +95,8 @@ var myLibrary = function (){
 		separator you are going to use in place of the original. Thus, if you send the
 		parameters (“a,b,c”, “,”, “/”), the function should return the string as “a/b/c”.
 	*/
-/*
-	var changeSeparator = function (string, separator, newSeparator){
-	};
+
+	//var changeSeparator = function (string, separator, newSeparator){};
 
 
 	//Number
@@ -132,9 +131,8 @@ var myLibrary = function (){
 		greater than or less than 10. It would then determine if 5 is within 50% of 10. The
 		function should then return the results.
 	*/
-/*
-	var checkPercent = function (check, val, percent){
-	};
+
+	//var checkPercent = function (check, val, percent){};
 
 
 	//Date Difference
@@ -146,9 +144,8 @@ var myLibrary = function (){
 		necessary to find the difference between the two dates and return the choice of
 		hours or days.
 	*/
-/*
-	var dateDiff = function (date1, date2, hoursDay){
-	};
+
+	//var dateDiff = function (date1, date2, hoursDay){};
 
 
 	//String to Numeric
@@ -185,9 +182,8 @@ var myLibrary = function (){
 		you’re using in the comparison. So, if you send the array [1,4,7,9,10,14,15] and
 		the number 12 into the function, it should return 14 as the next highest number.
 	*/
-/*
-	var getLowes = function (){
-	};
+
+	//var getLowes = function (){};
 
 
 
