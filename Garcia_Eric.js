@@ -41,9 +41,11 @@ var myLibrary = function (){
 		this would match the pattern. The only value returned from the function should
 		be a Boolean; that is, true if the string matches the pattern or false if it does not.
 	*/
-/*
-	var checkEmail = function (){
 
+	var checkEmail = function (email){
+		var mailFormat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+		
+		return mailFormat.test(email)
 		//return true or false
 	};
 	
@@ -227,7 +229,7 @@ var myLibrary = function (){
 	//Returns
 	return {
 		'checkPhoneNum': 		checkPhoneNum,
-		//'checkEmail': 		checkEmail,
+		'checkEmail': 			checkEmail,
 		'checkUrl': 			checkUrl,
 		//'createTitle': 		createTitle,
 		//'changeSeparator': 	changeSeparator,
@@ -244,7 +246,8 @@ var myLibrary = function (){
 var newLib = new myLibrary();
 
 console.log('It is ' + newLib.checkPhoneNum('123-456-7890') + ' that this is a phone number');
-console.log('It is ' + newLib.checkUrl("http://www.whereever.com") + ' that this is in url format')
+console.log('It is ' + newLib.checkEmail('test@test.com') + ' that the email is in the correct format');
+console.log('It is ' + newLib.checkUrl("http://www.whereever.com") + ' that this is in url format');
 console.log(newLib.convertDeci(3.14159, 3));
 console.log(newLib.strNum('123'));
 console.log('Find the sum of ' + newLib.getSum([1, 'pickles', 3, 'onions', 5, '10', 6, 'SDI']));
